@@ -19,10 +19,18 @@
         </a>
       </div>
       <div class="col-sm-4">
-        Bienvenue X
+        <% if !current_user.nil? %>
+          Bienvenue X
+        <% else %>
+          Bienvenue
+        <% end %>
       </div>
       <div class="col-sm-4">
-        <a href="#" class="navbar-btn">Se connecter</a>
+        <% if !current_user.nil? %>
+          <a href="users/sign_out" class="navbar-btn">Se déconnecter</a>
+        <% else %>
+          <a href="users/sign_in" class="navbar-btn">Se connecter</a>
+        <% end %>
       </div>
     </div>
   </div>
