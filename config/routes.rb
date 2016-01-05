@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'login/index'
   resources :cars
   devise_for :users
   root 'welcome#index'
