@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  get 'login/index'
+
   resources :cars
   devise_for :admins
   devise_for :users
