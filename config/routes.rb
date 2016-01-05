@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  
-
   resources :cars
-  devise_for :admins
   devise_for :users
   root 'welcome#index'
 
