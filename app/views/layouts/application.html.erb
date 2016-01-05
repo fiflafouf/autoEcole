@@ -7,10 +7,36 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=10, maximum-scale=10, user-scalable=no"/>
 </head>
-<body>
-
+<header>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="col-sm-4">
+        <a class="navbar-brand" href="#">
+          <%= image_tag 'logo.svg' %>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        Bienvenue X
+      </div>
+      <div class="col-sm-4">
+        <a href="#" class="navbar-btn">Se connecter</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
 <%= yield %>
-
+<footer>
+  <div class=col-sm-12>
+    Toto Ecole <br/>
+    totoecole@gmail.com <br/>
+    18, Rue Béteille <br/>
+    12 000 Rodez
+  </div>
+</footer>
 </body>
+
 </html>
