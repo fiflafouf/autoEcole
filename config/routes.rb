@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :passage_exams
+  resources :assister_lecon_codes
+  resources :lecon_codes
+  resources :lecon_conduites
+  resources :formules
+  resources :examen
   get 'login/index'
   resources :cars
   devise_for :users

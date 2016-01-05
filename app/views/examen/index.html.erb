@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Examen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Dateexam</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @examen.each do |examan| %>
+      <tr>
+        <td><%= examan.id %></td>
+        <td><%= examan.dateExam %></td>
+        <td><%= examan.type %></td>
+        <td><%= link_to 'Show', examan %></td>
+        <td><%= link_to 'Edit', edit_examan_path(examan) %></td>
+        <td><%= link_to 'Destroy', examan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Examan', new_examan_path %>

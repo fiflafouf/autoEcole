@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lecon code:</strong>
+  <%= @assister_lecon_code.lecon_code_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @assister_lecon_code.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_assister_lecon_code_path(@assister_lecon_code) %> |
+<%= link_to 'Back', assister_lecon_codes_path %>

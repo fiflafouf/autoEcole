@@ -18,7 +18,7 @@ class LeconConduitesControllerTest < ActionController::TestCase
 
   test "should create lecon_conduite" do
     assert_difference('LeconConduite.count') do
-      post :create, lecon_conduite: { Moniteur_id: @lecon_conduite.Moniteur_id, User_id: @lecon_conduite.User_id, dateLecon: @lecon_conduite.dateLecon, heureLecon: @lecon_conduite.heureLecon, id: @lecon_conduite.id }
+      post :create, lecon_conduite: { date: @lecon_conduite.date, heure: @lecon_conduite.heure, id: @lecon_conduite.id, user_id: @lecon_conduite.user_id, user_id: @lecon_conduite.user_id }
     end
 
     assert_redirected_to lecon_conduite_path(assigns(:lecon_conduite))
@@ -35,7 +35,7 @@ class LeconConduitesControllerTest < ActionController::TestCase
   end
 
   test "should update lecon_conduite" do
-    patch :update, id: @lecon_conduite, lecon_conduite: { Moniteur_id: @lecon_conduite.Moniteur_id, User_id: @lecon_conduite.User_id, dateLecon: @lecon_conduite.dateLecon, heureLecon: @lecon_conduite.heureLecon, id: @lecon_conduite.id }
+    patch :update, id: @lecon_conduite, lecon_conduite: { date: @lecon_conduite.date, heure: @lecon_conduite.heure, id: @lecon_conduite.id, user_id: @lecon_conduite.user_id, user_id: @lecon_conduite.user_id }
     assert_redirected_to lecon_conduite_path(assigns(:lecon_conduite))
   end
 

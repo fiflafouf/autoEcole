@@ -1,0 +1,2 @@
+module LeconCodesHelper
+end

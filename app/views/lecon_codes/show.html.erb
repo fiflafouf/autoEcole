@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @lecon_code.id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @lecon_code.date %>
+</p>
+
+<p>
+  <strong>Heure:</strong>
+  <%= @lecon_code.heure %>
+</p>
+
+<%= link_to 'Edit', edit_lecon_code_path(@lecon_code) %> |
+<%= link_to 'Back', lecon_codes_path %>
