@@ -1,9 +1,8 @@
 class CreateLeconCodes < ActiveRecord::Migration
   def change
     create_table :lecon_codes do |t|
-      t.integer :id
-      t.Date :date
-      t.Time :heure
+      t.datetime :date
+      t.time :heure
 
       t.timestamps null: false
     end

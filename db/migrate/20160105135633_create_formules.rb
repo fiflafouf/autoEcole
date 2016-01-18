@@ -1,7 +1,6 @@
 class CreateFormules < ActiveRecord::Migration
   def change
     create_table :formules do |t|
-      t.integer :id
       t.string :description
       t.integer :price
       t.integer :nbTicket
