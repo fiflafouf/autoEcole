@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :eleve_formules
   resources :formules
   get 'login/index'
+  get 'users/index'
   devise_for :users
   root 'welcome#index'
   get 'planning'=> 'planning#index'
