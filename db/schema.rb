@@ -11,32 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119101030) do
+ActiveRecord::Schema.define(version: 20160119145107) do
 
-  create_table "eleve_examen", force: :cascade do |t|
-    t.integer  "examenId"
-    t.integer  "eleveId"
-    t.integer  "passer"
-    t.integer  "score"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "eleve_formules", force: :cascade do |t|
-    t.integer  "eleveId"
-    t.integer  "formuleId"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "eleve_lecons", force: :cascade do |t|
-    t.integer  "eleveId"
-    t.integer  "leconId"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "examen", force: :cascade do |t|
+  create_table "examens", force: :cascade do |t|
     t.string   "type"
     t.datetime "date"
     t.datetime "created_at", null: false
@@ -53,16 +30,16 @@ ActiveRecord::Schema.define(version: 20160119101030) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "lecon_types", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "lecons", force: :cascade do |t|
     t.integer  "type"
     t.datetime "date"
     t.time     "heure"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lecons_types", force: :cascade do |t|
+    t.string   "nom"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -90,12 +67,35 @@ ActiveRecord::Schema.define(version: 20160119101030) do
     t.date     "dateNaiss"
     t.integer  "telFixe"
     t.integer  "telMobile"
-    t.integer  "moniteurId"
-    t.string   "voiture"
+    t.integer  "user_id"
+    t.string   "voiture_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "users_examens", force: :cascade do |t|
+    t.integer  "examen_id"
+    t.integer  "user_id"
+    t.integer  "passer"
+    t.integer  "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users_formules", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "formule_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users_lecons", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "lecon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "voitures", force: :cascade do |t|
     t.string   "immatriculation"
