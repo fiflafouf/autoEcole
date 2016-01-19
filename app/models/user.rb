@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   enum role: [:admin, :teacher, :student]
+  
+  
 end

@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 20160119101030) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "voitures", force: :cascade do |t|
-    t.integer  "immatriculation"
+    t.string   "immatriculation"
     t.integer  "km"
     t.string   "modele"
     t.string   "marque"

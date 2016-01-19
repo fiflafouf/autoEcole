@@ -5,5 +5,4 @@ class PlanningController < ApplicationController
         arr << Event.all
         @events_by_date = sort_events(arr)
     end 
-    
 end
