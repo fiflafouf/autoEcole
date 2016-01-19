@@ -1,0 +1,35 @@
+<% if current_user.admin? %>
+    <a href="#"><button name="addUser">Ajouter Utilisateur</button></a>
+    <a href="#"><button name="setUser">Modifier Utilisateur</button></a>
+    <a href="#"><button name="delUser">Supprimer Utilisateur</button></a>
+    
+    <a href="#"><button name="addLeconConduite">Ajouter Leçon de conduite</button></a>
+    <a href="#"><button name="setLeconConduite">Modifier Leçon de conduite</button></a>
+    <a href="#"><button name="delLeconConduite">Supprimer Leçon de conduite</button></a>
+    
+    <a href="#"><button name="addLeconCode">Ajouter Leçon de code</button></a>
+    <a href="#"><button name="setLeconCode">Modifier Leçon de code</button></a>
+    <a href="#"><button name="delLeconCode">Supprimer Leçon de code</button></a>
+    
+    <a href=""><button name="addCar">Ajouter Voiture</button></a>
+    <a href="#"><button name="setCar">Modifier Voiture</button></a>
+    <a href="#"><button name="delCar">Supprimer Voiture</button></a>
+    
+    <a href="#"><button name="addFormule">Ajouter Formule</button></a>
+    <a href="#"><button name="setFormule">Modifier Formule</button></a>
+    <a href="#"><button name="delFormule">Supprimer Formule</button></a>
+    
+    <a href="#"><button name="addExam">Ajouter Examen</button></a>
+    <a href="#"><button name="setExam">Modifier Examen</button></a>
+    <a href="#"><button name="delExam">Supprimer Examen</button></a>
+<% end %>
+
+    
+<% if current_user.student? %>
+    <!--  planning des heures de conduite de l'élève  -->
+<% end %>
+
+
+<% if current_user.student? %>
+    <!--  planning des heures de conduite du moniteur  -->
+<% end %>
