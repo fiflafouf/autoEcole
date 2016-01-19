@@ -69,6 +69,6 @@ class ExamenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def examan_params
-      params.require(:examan).permit(:id, :dateExam, :type)
+      params.require(:examan).permit(:type, :date)
     end
 end

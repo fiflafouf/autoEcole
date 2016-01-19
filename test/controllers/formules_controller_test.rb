@@ -18,7 +18,7 @@ class FormulesControllerTest < ActionController::TestCase
 
   test "should create formule" do
     assert_difference('Formule.count') do
-      post :create, formule: { description: @formule.description, id: @formule.id, nbTicket: @formule.nbTicket, price: @formule.price, priceTicket: @formule.priceTicket, user_id: @formule.user_id }
+      post :create, formule: { description: @formule.description, nbTickets: @formule.nbTickets, nom: @formule.nom, prix: @formule.prix, puTicket: @formule.puTicket }
     end
 
     assert_redirected_to formule_path(assigns(:formule))
@@ -35,7 +35,7 @@ class FormulesControllerTest < ActionController::TestCase
   end
 
   test "should update formule" do
-    patch :update, id: @formule, formule: { description: @formule.description, id: @formule.id, nbTicket: @formule.nbTicket, price: @formule.price, priceTicket: @formule.priceTicket, user_id: @formule.user_id }
+    patch :update, id: @formule, formule: { description: @formule.description, nbTickets: @formule.nbTickets, nom: @formule.nom, prix: @formule.prix, puTicket: @formule.puTicket }
     assert_redirected_to formule_path(assigns(:formule))
   end
 

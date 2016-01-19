@@ -69,6 +69,6 @@ class FormulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def formule_params
-      params.require(:formule).permit(:id, :description, :price, :nbTicket, :priceTicket, :user_id)
+      params.require(:formule).permit(:nom, :description, :nbTickets, :puTicket, :prix)
     end
 end

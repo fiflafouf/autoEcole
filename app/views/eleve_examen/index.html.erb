@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Eleve Examen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Examenid</th>
+      <th>Eleveid</th>
+      <th>Passer</th>
+      <th>Score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eleve_examen.each do |eleve_examan| %>
+      <tr>
+        <td><%= eleve_examan.examenId %></td>
+        <td><%= eleve_examan.eleveId %></td>
+        <td><%= eleve_examan.passer %></td>
+        <td><%= eleve_examan.score %></td>
+        <td><%= link_to 'Show', eleve_examan %></td>
+        <td><%= link_to 'Edit', edit_eleve_examan_path(eleve_examan) %></td>
+        <td><%= link_to 'Destroy', eleve_examan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eleve examan', new_eleve_examan_path %>

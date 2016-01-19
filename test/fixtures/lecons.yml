@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 1
+  date: 2016-01-19 08:29:40
+  heure: 2016-01-19 08:29:40
+
+two:
+  type: 1
+  date: 2016-01-19 08:29:40
+  heure: 2016-01-19 08:29:40

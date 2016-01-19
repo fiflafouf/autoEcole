@@ -1,17 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 1
+  nom: MyString
   description: MyString
-  price: 1
-  nbTicket: 1
-  priceTicket: 1
-  user_id: 1
+  nbTickets: 
+  puTicket: 1.5
+  prix: 1.5
 
 two:
-  id: 1
+  nom: MyString
   description: MyString
-  price: 1
-  nbTicket: 1
-  priceTicket: 1
-  user_id: 1
+  nbTickets: 
+  puTicket: 1.5
+  prix: 1.5

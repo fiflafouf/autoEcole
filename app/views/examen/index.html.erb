@@ -5,9 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Id</th>
-      <th>Dateexam</th>
       <th>Type</th>
+      <th>Date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +14,8 @@
   <tbody>
     <% @examen.each do |examan| %>
       <tr>
-        <td><%= examan.id %></td>
-        <td><%= examan.dateExam %></td>
         <td><%= examan.type %></td>
+        <td><%= examan.date %></td>
         <td><%= link_to 'Show', examan %></td>
         <td><%= link_to 'Edit', edit_examan_path(examan) %></td>
         <td><%= link_to 'Destroy', examan, method: :delete, data: { confirm: 'Are you sure?' } %></td>

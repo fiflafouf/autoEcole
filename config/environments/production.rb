@@ -63,16 +63,16 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { host: 'www.'}
+  config.action_mailer.default_url_options = { host: 'tranquil-earth-4564.herokuapp.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:                  'smtp.mandrillap.com',
-    port:                     587,
-    enable_starttls_auto:     true,
-  user_name:                  'Totoecole',
-    password:                 'qjRZazPyVILpIJfL24arZg',
-    authentication:           'login',
-    domain:                   '127.0.0.1',
+    address:                 'smtp.mailgun.org',
+    port:                   2525,
+    enable_starttls_auto:   true,
+    user_name:              'postmaster@sandboxa9eb79fcc73a41f7b391e9643dfc8895.mailgun.org',
+    password:               '1980abf32ff14f1451b336bfec409620',
+    authentication:         'login',
+    domain:                 'sandboxa9eb79fcc73a41f7b391e9643dfc8895.mailgun.org'
   }
   
 

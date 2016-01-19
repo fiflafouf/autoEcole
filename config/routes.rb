@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  resources :passage_exams
-  resources :assister_lecon_codes
-  resources :lecon_codes
-  resources :lecon_conduites
-  resources :formules
+  resources :voitures
+  resources :lecon_types
+  resources :lecons
+  resources :eleve_lecons
   resources :examen
+  resources :eleve_examen
+  resources :eleve_formules
+  resources :formules
   get 'login/index'
-  resources :cars
   devise_for :users
   root 'welcome#index'
 

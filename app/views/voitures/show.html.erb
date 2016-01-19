@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Immatriculation:</strong>
+  <%= @voiture.immatriculation %>
+</p>
+
+<p>
+  <strong>Km:</strong>
+  <%= @voiture.km %>
+</p>
+
+<p>
+  <strong>Modele:</strong>
+  <%= @voiture.modele %>
+</p>
+
+<p>
+  <strong>Marque:</strong>
+  <%= @voiture.marque %>
+</p>
+
+<%= link_to 'Edit', edit_voiture_path(@voiture) %> |
+<%= link_to 'Back', voitures_path %>

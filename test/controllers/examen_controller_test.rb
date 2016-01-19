@@ -18,7 +18,7 @@ class ExamenControllerTest < ActionController::TestCase
 
   test "should create examan" do
     assert_difference('Examan.count') do
-      post :create, examan: { dateExam: @examan.dateExam, id: @examan.id, type: @examan.type }
+      post :create, examan: { date: @examan.date, type: @examan.type }
     end
 
     assert_redirected_to examan_path(assigns(:examan))
@@ -35,7 +35,7 @@ class ExamenControllerTest < ActionController::TestCase
   end
 
   test "should update examan" do
-    patch :update, id: @examan, examan: { dateExam: @examan.dateExam, id: @examan.id, type: @examan.type }
+    patch :update, id: @examan, examan: { date: @examan.date, type: @examan.type }
     assert_redirected_to examan_path(assigns(:examan))
   end
 

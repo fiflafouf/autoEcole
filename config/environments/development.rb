@@ -17,7 +17,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   
   
-  config.action_mailer.default_url_options = "https://autoecole-sfoures.c9users.io/"
+  config.action_mailer.default_url_options = { host: 'autoecole-sfoures.c9users.io'}
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -44,13 +44,13 @@ Rails.application.configure do
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:                 'smtp.mandrillap.com',
-    port:                   587,
+    address:                 'smtp.mailgun.org',
+    port:                   2525,
     enable_starttls_auto:   true,
-    user_name:              'Totoecole',
-    password:               'qjRZazPyVILpIJfL24arZg',
+    user_name:              'postmaster@sandboxa9eb79fcc73a41f7b391e9643dfc8895.mailgun.org',
+    password:               '1980abf32ff14f1451b336bfec409620',
     authentication:         'login',
-    domain:                 ''
+    domain:                 'sandboxa9eb79fcc73a41f7b391e9643dfc8895.mailgun.org'
   }
   
 end

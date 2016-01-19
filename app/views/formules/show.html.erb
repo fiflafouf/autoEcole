@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Id:</strong>
-  <%= @formule.id %>
+  <strong>Nom:</strong>
+  <%= @formule.nom %>
 </p>
 
 <p>
@@ -11,23 +11,18 @@
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @formule.price %>
+  <strong>Nbtickets:</strong>
+  <%= @formule.nbTickets %>
 </p>
 
 <p>
-  <strong>Nbticket:</strong>
-  <%= @formule.nbTicket %>
+  <strong>Puticket:</strong>
+  <%= @formule.puTicket %>
 </p>
 
 <p>
-  <strong>Priceticket:</strong>
-  <%= @formule.priceTicket %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @formule.user_id %>
+  <strong>Prix:</strong>
+  <%= @formule.prix %>
 </p>
 
 <%= link_to 'Edit', edit_formule_path(@formule) %> |

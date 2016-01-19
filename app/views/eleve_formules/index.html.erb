@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Eleve Formules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Eleveid</th>
+      <th>Formuleid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eleve_formules.each do |eleve_formule| %>
+      <tr>
+        <td><%= eleve_formule.eleveId %></td>
+        <td><%= eleve_formule.formuleId %></td>
+        <td><%= link_to 'Show', eleve_formule %></td>
+        <td><%= link_to 'Edit', edit_eleve_formule_path(eleve_formule) %></td>
+        <td><%= link_to 'Destroy', eleve_formule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eleve formule', new_eleve_formule_path %>
