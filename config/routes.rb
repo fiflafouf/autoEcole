@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'login/index'
   devise_for :users
   root 'welcome#index'
+  get 'planning'=> 'planning#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
