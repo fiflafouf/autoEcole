@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160105102403) do
+ActiveRecord::Schema.define(version: 20160105141050) do
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+
+  create_table "assister_lecon_codes", force: :cascade do |t|
+    t.integer  "lecon_code_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "cars", force: :cascade do |t|
     t.integer  "num_voiture"
@@ -19,6 +44,58 @@ ActiveRecord::Schema.define(version: 20160105102403) do
     t.string   "marque"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "examen", force: :cascade do |t|
+    t.date     "dateExam"
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "formules", force: :cascade do |t|
+    t.string   "description"
+    t.integer  "price"
+    t.integer  "nbTicket"
+    t.integer  "priceTicket"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "lecon_codes", force: :cascade do |t|
+    t.date     "date"
+    t.time     "heure"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lecon_conduites", force: :cascade do |t|
+    t.date     "date"
+    t.time     "heure"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "moniteurs", force: :cascade do |t|
+    t.integer  "num_moniteur"
+    t.integer  "num_voiture"
+    t.string   "surnom"
+    t.string   "nom"
+    t.string   "prenom"
+    t.string   "adresse"
+    t.string   "telephone"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "passage_exams", force: :cascade do |t|
+    t.integer  "examan_id"
+    t.integer  "user_id"
+    t.float    "resultat"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
