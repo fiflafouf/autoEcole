@@ -4,13 +4,9 @@ class UsersController < ApplicationController
     end
     
   def new
-    @users = User.new
+    @user = User.new
   end
-    
 
-  def new
-    @users = User.new
-  end
 
 
   def edit
@@ -61,13 +57,13 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-        if :role.admin?
+       # if :role.admin?
             params.require(:users).permit(:email, :role, :nom, :prenom, :surnom, :addr, :cp, :ville, :dateNaiss, :telFixe, :telMobile)
-        elsif :role.student?
-            params.require(:users).permit(:email, :role, :nom, :prenom, :surnom, :addr, :cp, :ville, :dateNaiss, :telFixe, :telMobile, :user_id)
-        else 
-            params.require(:users).permit(:email, :role, :nom, :prenom, :surnom, :addr, :cp, :ville, :dateNaiss, :telFixe, :telMobile, :voiture_id)
-        end
+        #elsif :role.student?
+         #   params.require(:users).permit(:email, :role, :nom, :prenom, :surnom, :addr, :cp, :ville, :dateNaiss, :telFixe, :telMobile, :user_id)
+        #else 
+         #   params.require(:users).permit(:email, :role, :nom, :prenom, :surnom, :addr, :cp, :ville, :dateNaiss, :telFixe, :telMobile, :voiture_id)
+        #end
      
     end
 end
