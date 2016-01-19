@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>role:</strong>
+  <%= @user.role %>
+</p>
+
+<p>
+  <strong>nom:</strong>
+  <%= @user.nom %>
+</p>
+
+<p>
+  <strong>prenom:</strong>
+  <%= @user.prenom %>
+</p>
+
+<p>
+  <strong>surnom:</strong>
+  <%= @user.surnom %>
+</p>
+
+<p>
+  <strong>addr:</strong>
+  <%= @user.addr %>
+</p>
+
+<p>
+  <strong>cp:</strong>
+  <%= @user.cp %>
+</p>
+
+<p>
+  <strong>ville:</strong>
+  <%= @user.ville %>
+</p>
+
+<p>
+  <strong>dateNaiss:</strong>
+  <%= @user.dateNaiss %>
+</p>
+
+<p>
+  <strong>telFixe:</strong>
+  <%= @user.telFixe %>
+</p>
+
+<p>
+  <strong>telMobile:</strong>
+  <%= @user.telMobile %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+

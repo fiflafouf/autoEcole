@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   resources :eleve_examen
   resources :eleve_formules
   resources :formules
+  resources :users
   get 'login/index'
   get 'users/index'
+  get 'users/edit'
+  get 'users/show'
+  get 'users/new'
   devise_for :users
   root 'welcome#index'
   get 'planning'=> 'planning#index'
