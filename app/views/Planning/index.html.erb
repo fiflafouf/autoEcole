@@ -1,0 +1,13 @@
+<%= calendrier(:year => 2012, :month => 5, :day => 25, :start_on_monday => true, :display => :month) do |cell_begin_time, cell_end_time| %>
+  <!-- this code is run for every cell of the calendar -->
+
+  <% if count_sorted_events(@events_by_date, cell_begin_time, cell_end_time) > 0 %>
+    <!-- this code is run only there is at least one event between cell begin and end -->
+
+    <ul>
+    <% yield_sorted_events(@events_by_date, cell_begin_time, cell_end_time) do |obj| %>
+      <!-- you may handle event/meeting/... with the obj variable -->
+      <li><%= obj.title %></li>
+    <% end %>
+    </ul>
+  <% end %>
