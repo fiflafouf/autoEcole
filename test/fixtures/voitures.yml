@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  immatriculation: MyString
+  km: 1
+  modele: MyString
+  marque: MyString
+
+two:
+  immatriculation: MyString
+  km: 1
+  modele: MyString
+  marque: MyString

@@ -1,0 +1,72 @@
+<% if user_signed_in? %>    
+    <% if current_user.admin? %>
+
+        <a href="utilisateurs"><button name="seeUser">gestion des Utilisateurs</button></a>
+        <br />
+
+        <a href="lecons"><button name="seeLeconConduite">gestion des Leçons</button></a>
+        <br />
+        
+        <a href="users_lecons"><button name="seeLeconConduite">gestion des inscriptions aux lecons</button></a>
+        <br />
+
+        <a href="voitures"><button name="seeCar">gestion des Voitures</button></a>
+        <br />
+
+        <a href="formules"><button name="seeFormule">gestion des Formules</button></a>
+        <br />
+
+        <a href="examens"><button name="seeExam">gestion des Examens</button></a>
+    <% end %>
+
+    <% if current_user.student? %>
+    
+        
+        <!--  planning des heures de conduite de l'élève  -->
+        <h2>Affichage des rendez-vous</h2>
+        
+        <p>je suis un élève</p>
+        <% if @users_lecons %>
+            <% @users_lecons.each do |users_lecon| %>
+                <%= lecon = @users_lecon.lecon%>
+                <%= util = @users_lecon.user%>
+                <% if current_user.id == @users_lecon.user_id %>
+                  <tr>
+                    <td> <%= lecon.date %> </td>
+                    <td> <%= lecon.heure %> </td>
+                    <td> <%= lecon.date %> </td>
+                    <td> <%= util.nom %> </td>
+                    <td> <%= util.prenom %> </td>
+                    <td> <%= util.user_id %> </td>
+                  </tr>
+                <% end %>  
+            <% end %>
+        <% else%>
+            <p>Vous n'avez pas de rendez-vous</p>
+        <% end %>
+    <% end %>
+    
+    
+    <% if current_user.teacher? %>
+        <!--  planning des heures de conduite du moniteur  -->
+        <h2>Affichage des rendez-vous</h2>
+        
+        <p>je suis un moniteur</p>
+        <% @users_lecons.each do |users_lecon| %>
+        <%= lecon = @users_lecon.lecon%>
+        <%= util = @users_lecon.lecon%>
+        <% if current_user.id == @users_lecon.user_id %>
+          <tr>
+            <td> <%= lecon.date %> </td>
+            <td> <%= lecon.heure %> </td>
+            <td> <%= lecon.date %> </td>
+            <td> <%= util.nom %> </td>
+            <td> <%= util.prenom %> </td>
+            <td> <%= util.user_id %> </td>
+          </tr>
+          <% end %>
+        <% end %>
+    <% end %>
+<% else %>
+    <p>vous n'etes pas connecte</p>
+<% end %>

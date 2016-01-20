@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lecons type:</strong>
+  <%= @lecon.lecons_type_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @lecon.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @lecon.time %>
+</p>
+
+<%= link_to 'Edit', edit_lecon_path(@lecon) %> |
+<%= link_to 'Back', lecons_path %>

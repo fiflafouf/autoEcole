@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
-  
-
-  resources :cars
-  devise_for :admins
   devise_for :users
+  resources :users_examens
+  resources :lecons
+  resources :lecons_types
+  resources :formules
+  resources :users_formules
+  resources :users_lecons
+  resources :examens
+  resources :voitures
+  resources :users, path: 'utilisateurs'
+  resources :menu
+  get 'menu/index'
+  get 'login/index'
   root 'welcome#index'
+  get 'planning'=> 'planning#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

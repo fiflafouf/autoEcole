@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Examens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @examens.each do |examen| %>
+      <tr>
+        <td><%= examen.type %></td>
+        <td><%= examen.date %></td>
+        <td><%= link_to 'Show', examen %></td>
+        <td><%= link_to 'Edit', edit_examen_path(examen) %></td>
+        <td><%= link_to 'Destroy', examen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Examens', new_examen_path %>

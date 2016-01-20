@@ -17,7 +17,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   
   
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'autoecole-sfoures.c9users.io'}
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -41,4 +41,16 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:                 'smtp.mailgun.org',
+    port:                   2525,
+    enable_starttls_auto:   true,
+    user_name:              'postmaster@sandboxa9eb79fcc73a41f7b391e9643dfc8895.mailgun.org',
+    password:               '1980abf32ff14f1451b336bfec409620',
+    authentication:         'login',
+    domain:                 'sandboxa9eb79fcc73a41f7b391e9643dfc8895.mailgun.org'
+  }
+  
 end

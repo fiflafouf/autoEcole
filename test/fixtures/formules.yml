@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom: MyString
+  description: MyString
+  nbTickets: 1
+  puTicket: 1.5
+  prix: 1.5
+
+two:
+  nom: MyString
+  description: MyString
+  nbTickets: 1
+  puTicket: 1.5
+  prix: 1.5

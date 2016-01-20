@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 <head>
   <title>Workspace</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=10, maximum-scale=10, user-scalable=no"/>
 </head>
-<body>
-
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header col-sm-12">
+        <div class="row">
+          <div class="col-sm-2">
+            <a class="navbar-brand" href="#">
+              <%= image_tag 'logo.svg' %>
+            </a>
+          </div>
+          <div class="welcome col-sm-2">
+            <% if user_signed_in? %>
+              Bienvenue <%= truncate(current_user.email, length: 15) %>
+            <% else %>
+              Bienvenue !
+            <% end %>
+          </div>
+          <div class="login_button col-sm-2 col-sm-offset-4">
+            <% if user_signed_in? %>
+              <%= link_to('Deconnexion', destroy_user_session_path, :method => :delete) %>
+            <% else %>
+              <%= link_to('Connexion', new_user_session_path)  %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</header>
 <%= yield %>
-
+<footer>
+  <div class="footer col-sm-12">
+    Auto Ecole de Rodez <br/>
+    autoecolerodez@gmail.com <br/>
+    18, Rue Béteille <br/>
+    12 000 Rodez
+  </div>
+</footer>
 </body>
 </html>

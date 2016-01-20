@@ -1,3 +1,29 @@
-<h1>Auto Ecole</h1>
 
+<div class="col-sm-12">
+    <h1>Auto Ecole de Rodez</h1>
+    
+    <h2>Présentation de l'Auto Ecole de Rodez</h2>
+    
+    <p>L'Auto Ecole de Rodez vous souhaite la bienvenue !
+    Vous serez accueilli par une equipe formée de pedagogues pour vous accompagner tout au long du passage de votre permis. 
+    L'Auto Ecole de Rodez possede actuellement 7 véhicules modernes et un module d'evaluation du code de la route. 
+    Tout est fait pour que vous obteniez votre permis B.</p>
+</div>
 
+<div class="col-sm-12">
+    <div class="col-sm-12">
+        <h2>Tarification</h2>
+    </div>
+    <% @formules.each do |formule| %>
+    <div class="col-sm-4">
+        <h3><%= formule.nom %> : <%= formule.prix %>€</h3>
+        <p><%= formule.description %></p>
+        <% if formule.nbTickets? %>
+            <p>Cette formule comprends <%= formule.nbTickets %> leçons de conduite.</p>
+        <% else %>
+            <p>Cette formule ne comprends pas de leçons de conduite.</p>
+        <% end %>
+        <p>Chaque ticket pour une leçon de conduite sera ensuite facturé <%= formule.puTicket %>€</p>
+    </div>
+    <% end %>
+</div>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @formule.nom %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @formule.description %>
+</p>
+
+<p>
+  <strong>Nbtickets:</strong>
+  <%= @formule.nbTickets %>
+</p>
+
+<p>
+  <strong>Puticket:</strong>
+  <%= @formule.puTicket %>
+</p>
+
+<p>
+  <strong>Prix:</strong>
+  <%= @formule.prix %>
+</p>
+
+<%= link_to 'Edit', edit_formule_path(@formule) %> |
+<%= link_to 'Back', formules_path %>

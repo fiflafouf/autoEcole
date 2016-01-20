@@ -1,0 +1,24 @@
+<%= simple_form_for(@user) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email %>
+    <p style="font-weight:bold">Role</p>
+    <%= select(:user, :role, [['administrateur','admin'], ['élève','student'],['moniteur','teacher']]) %>
+    <%= f.input :nom %>
+    <%= f.input :prenom %>
+    <%= f.input :surnom %>
+    <%= f.input :addr %>
+    <%= f.input :cp %>
+    <%= f.input :ville %>
+    <%= f.input :dateNaiss %>
+    <%= f.input :telFixe %>
+    <%= f.input :telMobile %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

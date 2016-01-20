@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @examen.type %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @examen.date %>
+</p>
+
+<%= link_to 'Edit', edit_examen_path(@examen) %> |
+<%= link_to 'Back', examens_index_path %>
