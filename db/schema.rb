@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20160120000735) do
     t.integer  "telFixe"
     t.integer  "telMobile"
     t.integer  "user_id"
-    t.string   "voiture"
+    t.string   "voiture_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

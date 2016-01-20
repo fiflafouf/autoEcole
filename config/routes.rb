@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   resources :menu
   get 'menu/index'
   get 'login/index'
-  
   root 'welcome#index'
   get 'planning'=> 'planning#index'
 
