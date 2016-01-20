@@ -3,13 +3,13 @@
 one:
   nom: MyString
   description: MyString
-  nbTickets: 
+  nbTickets: 1
   puTicket: 1.5
   prix: 1.5
 
 two:
   nom: MyString
   description: MyString
-  nbTickets: 
+  nbTickets: 1
   puTicket: 1.5
   prix: 1.5

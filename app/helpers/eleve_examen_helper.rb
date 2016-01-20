@@ -1,2 +1,0 @@
-module EleveExamenHelper
-end

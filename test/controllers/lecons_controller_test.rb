@@ -18,7 +18,7 @@ class LeconsControllerTest < ActionController::TestCase
 
   test "should create lecon" do
     assert_difference('Lecon.count') do
-      post :create, lecon: { date: @lecon.date, heure: @lecon.heure, type: @lecon.type }
+      post :create, lecon: { date: @lecon.date, lecons_type_id: @lecon.lecons_type_id, time: @lecon.time }
     end
 
     assert_redirected_to lecon_path(assigns(:lecon))
@@ -35,7 +35,7 @@ class LeconsControllerTest < ActionController::TestCase
   end
 
   test "should update lecon" do
-    patch :update, id: @lecon, lecon: { date: @lecon.date, heure: @lecon.heure, type: @lecon.type }
+    patch :update, id: @lecon, lecon: { date: @lecon.date, lecons_type_id: @lecon.lecons_type_id, time: @lecon.time }
     assert_redirected_to lecon_path(assigns(:lecon))
   end
 

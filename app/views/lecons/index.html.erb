@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Type</th>
+      <th>Lecons type</th>
       <th>Date</th>
-      <th>Heure</th>
+      <th>Time</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +15,9 @@
   <tbody>
     <% @lecons.each do |lecon| %>
       <tr>
-        <td><%= lecon.type %></td>
+        <td><%= lecon.lecons_type_id %></td>
         <td><%= lecon.date %></td>
-        <td><%= lecon.heure %></td>
+        <td><%= lecon.time %></td>
         <td><%= link_to 'Show', lecon %></td>
         <td><%= link_to 'Edit', edit_lecon_path(lecon) %></td>
         <td><%= link_to 'Destroy', lecon, method: :delete, data: { confirm: 'Are you sure?' } %></td>

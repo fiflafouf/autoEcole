@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  resources :voitures
-  resources :lecon_types
+  resources :users_examens
   resources :lecons
-  resources :eleve_lecons
-  resources :examen
-  resources :eleve_examen
-  resources :eleve_formules
+  resources :lecons_types
   resources :formules
+  resources :users_formules
+  resources :users_lecons
+  resources :examens
+  resources :voitures
   get 'login/index'
   devise_for :users
   root 'welcome#index'

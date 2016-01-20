@@ -1,1 +1,1 @@
-json.extract! @lecon, :id, :type, :date, :heure, :created_at, :updated_at
+json.extract! @lecon, :id, :lecons_type_id, :date, :time, :created_at, :updated_at

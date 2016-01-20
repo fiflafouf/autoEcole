@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @users_formule.user_id %>
+</p>
+
+<p>
+  <strong>Formule:</strong>
+  <%= @users_formule.formule_id %>
+</p>
+
+<%= link_to 'Edit', edit_users_formule_path(@users_formule) %> |
+<%= link_to 'Back', users_formules_path %>

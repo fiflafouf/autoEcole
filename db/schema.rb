@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119145107) do
+ActiveRecord::Schema.define(version: 20160120000735) do
 
   create_table "examens", force: :cascade do |t|
     t.string   "type"
@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(version: 20160119145107) do
   end
 
   create_table "lecons", force: :cascade do |t|
-    t.integer  "type"
+    t.integer  "lecons_type_id"
     t.datetime "date"
     t.time     "heure"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "lecons_types", force: :cascade do |t|
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20160119145107) do
     t.integer  "telFixe"
     t.integer  "telMobile"
     t.integer  "user_id"
-    t.string   "voiture_id"
+    t.string   "voiture"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
