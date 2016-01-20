@@ -62,6 +62,15 @@ formule.puTicket = 20
 formule.prix = 1500
 formule.save!
 
+LeconsType.delete_all
+lecon_type = LeconsType.new
+lecon_type.nom = "code"
+lecon_type.save!
+
+lecon_type = LeconsType.new
+lecon_type.nom = "conduite"
+lecon_type.save!
+
 Lecon.delete_all
 lecon = Lecon.new
 lecon.lecons_type_id = 1
@@ -69,6 +78,11 @@ lecon.date = DateTime.civil_from_format :local, 2016, 01, 22
 lecon.heure = Time.at(43200)
 lecon.save!
 
+UsersLecon.delete_all
+users_lecon = UsersLecon.new
+users_lecon.user_id = 2
+users_lecon.lecon_id = 1
+users_lecon.save!
 
 Voiture.delete_all
 voiture = Voiture.new
