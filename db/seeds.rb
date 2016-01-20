@@ -15,7 +15,7 @@ user.role="admin"
 user.save!
 
 user = User.new
-user.email = 'eleven@eleve.com'
+user.email = 'eleve@eleve.com'
 user.password = '12345678'
 user.password_confirmation = '12345678'
 user.role="student"
@@ -26,6 +26,7 @@ user.email = 'teacher@teacher.com'
 user.password = '12345678'
 user.password_confirmation = '12345678'
 user.role="teacher"
+user.voiture_id="0"
 user.save!
 
 Formule.delete_all
@@ -60,3 +61,19 @@ formule.nbTickets = 45
 formule.puTicket = 20
 formule.prix = 1500
 formule.save!
+
+Lecon.delete_all
+lecon = Lecon.new
+lecon.lecons_type_id = 1
+lecon.date = DateTime.civil_from_format :local, 2016, 01, 22
+lecon.heure = Time.at(43200)
+lecon.save!
+
+
+Voiture.delete_all
+voiture = Voiture.new
+voiture.immatriculation = "5DEF47"
+voiture.km ="12000"
+voiture.modele="2Cv"
+voiture.marque="Renault"
+voiture.save!
