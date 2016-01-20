@@ -69,6 +69,6 @@ class LeconsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lecon_params
-      params.require(:lecon).permit(:lecons_type_id, :date, :time)
+      params.require(:lecon).permit(:lecons_type_id, :date, :heure)
     end
 end
