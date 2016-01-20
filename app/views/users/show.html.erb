@@ -1,60 +1,61 @@
 <p id="notice"><%= notice %></p>
-
+<%if user_signed_in? %> 
 <p>
-  <strong>email:</strong>
+  <strong>Email:</strong>
   <%= @user.email %>
 </p>
 
 <p>
-  <strong>role:</strong>
+  <strong>Role:</strong>
   <%= @user.role %>
 </p>
 
 <p>
-  <strong>nom:</strong>
+  <strong>Nom:</strong>
   <%= @user.nom %>
 </p>
 
 <p>
-  <strong>prenom:</strong>
+  <strong>Prenom:</strong>
   <%= @user.prenom %>
 </p>
 
 <p>
-  <strong>surnom:</strong>
+  <strong>Surnom:</strong>
   <%= @user.surnom %>
 </p>
 
 <p>
-  <strong>addr:</strong>
+  <strong>Addr:</strong>
   <%= @user.addr %>
 </p>
 
 <p>
-  <strong>cp:</strong>
+  <strong>CP:</strong>
   <%= @user.cp %>
 </p>
 
 <p>
-  <strong>ville:</strong>
+  <strong>Ville:</strong>
   <%= @user.ville %>
 </p>
 
 <p>
-  <strong>dateNaiss:</strong>
+  <strong>Date de Naissance:</strong>
   <%= @user.dateNaiss %>
 </p>
 
 <p>
-  <strong>telFixe:</strong>
+  <strong>Telephone Fixe:</strong>
   <%= @user.telFixe %>
 </p>
 
 <p>
-  <strong>telMobile:</strong>
+  <strong>Telephone Mobile:</strong>
   <%= @user.telMobile %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 
+<% end %>

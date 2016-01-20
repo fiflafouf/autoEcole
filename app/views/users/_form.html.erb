@@ -3,7 +3,8 @@
 
   <div class="form-inputs">
     <%= f.input :email %>
-    <%= f.input :role %>
+    <p style="font-weight:bold">Role</p>
+    <%= select(:user, :role, [['administrateur','admin'], ['élève','student'],['moniteur','teacher']]) %>
     <%= f.input :nom %>
     <%= f.input :prenom %>
     <%= f.input :surnom %>
@@ -13,6 +14,8 @@
     <%= f.input :dateNaiss %>
     <%= f.input :telFixe %>
     <%= f.input :telMobile %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
   </div>
 
   <div class="form-actions">

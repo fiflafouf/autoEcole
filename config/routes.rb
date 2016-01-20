@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :users_examens
   resources :lecons
   resources :lecons_types
@@ -7,13 +8,11 @@ Rails.application.routes.draw do
   resources :users_lecons
   resources :examens
   resources :voitures
-  resources :users
+  resources :users, path: 'utilisateurs'
+  resources :menu
+  get 'menu/index'
   get 'login/index'
-  get 'users/index'
-  get 'users/edit'
-  get 'users/show'
-  get 'users/new'
-  devise_for :users
+  
   root 'welcome#index'
   get 'planning'=> 'planning#index'
 
