@@ -4,20 +4,15 @@ class UsersController < ApplicationController
     end
     
   def new
-    @users = User.new
-  end
-    
-  # GET /voitures/new
-  def new
-    @users = User.new
+    @user = User.new
   end
 
-  # GET /voitures/1/edit
+
+
   def edit
   end
 
-  # POST /voitures
-  # POST /voitures.json
+
   def create
     @users = User.new(user_params)
 
@@ -32,8 +27,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /voitures/1
-  # PATCH/PUT /voitures/1.json
+
   def update
     respond_to do |format|
       if @users.update(user_params)
@@ -46,8 +40,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # DELETE /voitures/1
-  # DELETE /voitures/1.json
+
   def destroy
     @users.destroy
     respond_to do |format|
@@ -64,15 +57,14 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-        if current_user.admin?
-            params.require(:users).permit(:immatriculation, :km, :modele, :marque)
-        elsif current_user.student?
-            params.require(:users).permit(:immatriculation, :km, :modele, :marque)
-        else 
-            params.require(:users).permit(:immatriculation, :km, :modele, :marque)
-        end
-
-          
+       # if :role.admin?
+            params.require(:users).permit(:email, :role, :nom, :prenom, :surnom, :addr, :cp, :ville, :dateNaiss, :telFixe, :telMobile)
+        #elsif :role.student?
+         #   params.require(:users).permit(:email, :role, :nom, :prenom, :surnom, :addr, :cp, :ville, :dateNaiss, :telFixe, :telMobile, :user_id)
+        #else 
+         #   params.require(:users).permit(:email, :role, :nom, :prenom, :surnom, :addr, :cp, :ville, :dateNaiss, :telFixe, :telMobile, :voiture_id)
+        #end
+     
     end
 end
     

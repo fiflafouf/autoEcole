@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   resources :users_lecons
   resources :examens
   resources :voitures
+  resources :users
   get 'login/index'
+  get 'users/index'
+  get 'users/edit'
+  get 'users/show'
+  get 'users/new'
   devise_for :users
   root 'welcome#index'
   get 'planning'=> 'planning#index'
